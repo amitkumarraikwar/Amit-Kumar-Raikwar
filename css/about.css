@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("../assets/background1.jpeg") no-repeat center / cover;
+    padding: 50px 5%;
+    line-height: 1.6;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container2 {
+  overflow: auto;
+  flex-grow: 1;
+  scrollbar-width: 0;
+  scrollbar-color: transparent;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes zoom-in {
+    100% {
+        transform: scale(1);
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 2s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-color: #fff;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2rem;
+    padding: 50px 5% 0;
+    color: #fff;
+    animation-delay: 1.5s;
+}
+
+/* Section styles */
+#about {
+  margin-top: 4rem;
+}
+
+/* Container */
+.about-container {
+  max-width: 92%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Grid layout */
+.grid-two-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .grid-two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Left Column */
+.left-col .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+}
+
+.left-col h2 {
+  font-size: 2.25rem; 
+  font-weight: bold;
+  color: #fff; 
+}
+
+/* Underline */
+.underline {
+  width: 8rem; 
+  height: 0.5rem; 
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+}
+
+/* Text content */
+.text-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Focus Areas Grid */
+.focus-areas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .focus-areas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, .1);
+  border: 3px solid rgba(255, 255, 255, .1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+}
+
+.stat .number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3182ce;
+  margin-bottom: 0.5rem;
+}
+
+.stat .label {
+  color: #ffffff;
+}
+
+/* Right Column */
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Card Box for journey and focus */
+.card-box {
+  background: rgba(255, 255, 255, .1);
+  border: 3px solid rgba(255, 255, 255, .1);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-box h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid #fff;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: #cebe31;
+  border-radius: 50%;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-header h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.timeline-header .date {
+  font-size: 0.875rem;
+  color: #fff; /* gray-500 */
+}
+
+.timeline p {
+  color: #fff;
+}
+
+/* Focus List */
+.focus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.focus-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.focus-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.focus-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.focus-item p {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* Icon sizes */
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #c4ce31;
+}
+
+.small-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #c4ce31;
+}
